@@ -156,12 +156,12 @@ body {
     top: -0.5em;
   }
 
-.nav-item, .col-md-3 a {
+.nav-item a,.col-md-3 a {
     color: black;
     text-decoration: none;
     background-color: transparent;
   }
-.nav-item, .col-md-3 a:hover {
+.nav-item a:hover, .col-md-3 a:hover {
     color: white;
   }
 
