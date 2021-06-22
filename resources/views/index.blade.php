@@ -1,5 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
-    <h1 class="mt-2 mb-3">Здесь будет добавлена основная информация главной страницы</h1>
+    <div class="description">
+        <p>Добро пожаловать на nails.com!<br>
+            Здесь вы можете записаться к нашим мастерам</p>
+    </div>
 @endsection

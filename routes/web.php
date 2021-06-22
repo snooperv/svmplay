@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::view('/login-login', 'login');
 Route::view('/signup-signup', 'signup');
+Route::view('/main', 'main_index');
 
 Route::get('/make-order', [MakeOrder::class, 'index']);
 Route::post('/make-order', [MakeOrder::class, 'store']);

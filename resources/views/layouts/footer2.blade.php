@@ -1,4 +1,6 @@
 <footer class="footer">
+    <div class="space">
+    </div>
     <div class="contacts">
         <span class="contacts">Иванов Иван Иванович</span>
         <span class="contacts">inanov@urfu.ru</span>
