@@ -1,0 +1,101 @@
+body, html{
+    margin: 0;
+}
+
+footer{
+    background: lightskyblue;
+
+}
+
+header{
+    background: lightskyblue;
+}
+
+h2{
+    text-align: center;
+    color: aliceblue;
+}
+
+.logo-name{
+    display: inline-block;
+    font-size: 54px;
+    padding: 30px;
+    margin: auto;
+}
+
+.pink{
+    color: pink;
+}
+
+.AutologinForm, .registration-form{
+    margin: 120px auto;
+    border-radius: 30px;
+    border: 2px solid black;
+    overflow: hidden;
+    width: 500px;
+    background: #b2b2b2;
+
+}
+
+.AutologinForm{
+    height: 430px;
+}
+
+.form{
+    display: block;
+    margin: auto;
+}
+
+.form:first-child{
+    margin-top: 30px;
+}
+
+.input{
+    background: lightpink;
+    padding: 15px;
+    width: 300px;
+    border: 1px solid hotpink;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+form input{
+    background: lightpink;
+    padding: 15px;
+    width: 300px;
+    border: 1px solid hotpink;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.button{
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registration{
+    display: inline-block;
+    text-decoration: none;
+    margin: 70px 0 0 195px;
+    color: dodgerblue;
+}
+
+footer{
+    overflow: hidden;
+    width: 100%;
+}
+
+.contacts{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    padding: 30px 30px ;
+    color: aliceblue;
+    font-size: large;
+}
+
+.contacts:last-child{
+    margin-bottom: 0;
+}
