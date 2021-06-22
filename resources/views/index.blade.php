@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+    {{ "Главная" }}
+@endsection
+
 @section('content')
     <div class="description">
         <p>Добро пожаловать на nails.com!<br>

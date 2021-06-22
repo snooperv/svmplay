@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Check It!</title>
+    <title>NAILS - @yield('title')</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="<?php echo asset('css/nikita.css');?>" rel="stylesheet">
