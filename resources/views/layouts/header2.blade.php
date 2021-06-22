@@ -13,7 +13,7 @@
                 <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>
             </ul>
 
-            <div class="col-md-3 text-end">
+            <div class="col-md-3 text-end d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
                 @guest
                     @if (Route::has('login'))
                         <a href="{{ route('login') }}">
@@ -25,7 +25,7 @@
                             <button type="button" class="btn btn-primary">Регистрация</button></a>
                     @endif
                 @else
-
+                    <h4>
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
@@ -41,6 +41,7 @@
                             @csrf
                         </form>
                     </div>
+                    </h4>
 
                 @endguest
             </div>

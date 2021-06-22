@@ -156,12 +156,12 @@ body {
     top: -0.5em;
   }
 
-.nav-item a {
+.nav-item, .col-md-3 a {
     color: black;
     text-decoration: none;
     background-color: transparent;
   }
-.nav-item a:hover {
+.nav-item, .col-md-3 a:hover {
     color: white;
   }
 
@@ -1070,7 +1070,8 @@ body {
 
   .col-md-3 {
     flex: 0 0 25%;
-    max-width: 25%;
+    max-width: 12%;
+      margin-right: 7%;
   }
 
   .col-md-4 {
@@ -3150,7 +3151,7 @@ input[type=button].btn-block {
   border: 0;
 }
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #16181b;
+  color: #16181b !important;
   text-decoration: none;
   background-color: #e9ecef;
 }
