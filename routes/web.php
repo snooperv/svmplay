@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Orders\MakeOrder;
 use App\Http\Controllers\Orders\MakeOrderController;
 use App\Http\Controllers\Orders\OrdersController;
 use Illuminate\Support\Facades\Auth;
@@ -29,9 +28,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::view('/login-login', 'login');
-Route::view('/signup-signup', 'signup');
-Route::view('/main', 'main_index');
+Route::view('/orders', 'orders');
 
 Route::get('/make-order', [MakeOrderController::class, 'index']);
 Route::post('/make-order', [MakeOrderController::class, 'store']);
