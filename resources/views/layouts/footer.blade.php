@@ -1,5 +1,10 @@
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <span class="text-muted"><h1>Здесь будет добавлен футер страницы</h1></span>
+<footer class="footer">
+    <div class="space">
+    </div>
+    <div class="contacts">
+        <span class="contacts">Иванов Иван Иванович</span>
+        <span class="contacts">inanov@urfu.ru</span>
+        <span class="contacts"></span>
+        <div class="contacts">2021</div>
     </div>
 </footer>

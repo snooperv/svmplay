@@ -14,11 +14,11 @@
 
 <body>
 
-@include('layouts.header2')
+@include('layouts.header')
 <div class="content">
 @yield('content')
 </div>
-@include('layouts.footer2')
+@include('layouts.footer')
 
 </body>
 </html>
