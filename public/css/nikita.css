@@ -6,6 +6,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    background: url("background.png") repeat center;
 }
 
 footer{
@@ -15,14 +16,46 @@ footer{
 header{
     background: lightskyblue;
 }
-
-h2{
-    text-align: center;
-    color: aliceblue;
-}
-
 .description {
-    margin-top: 15px;
+    margin: 45px auto 0 auto;
+    background: aliceblue;
+    width: 500px;
+    border: 2px solid lightskyblue;
+    border-radius: 10px;
+}
+.buttons{
+    display: grid;
+    grid-template: "btn1 btn2";
+}
+.description h2{
+    font-family: Calibri, sans-serif;
+    text-align: center;
+}
+.description p{
+    margin: 20px 15px 15px 15px;
+    font-size: 22px;
+    font-family: Calibri, sans-serif;
+}
+.buttons{
+    margin: 40px auto 0 auto;
+    width: 500px;
+    align-items: center;
+}
+.buttons a{
+    margin: auto;
+    width: 180px;
+    text-decoration: none;
+    border: 2px solid black;
+    background: #343a40;
+    padding: 20px;
+    border-radius: 7px;
+    color: white;
+    font-size: 22px;
+    transition: 0.4s;
+}
+.buttons a:hover{
+    background: black;
+
 }
 
 .logo-name{

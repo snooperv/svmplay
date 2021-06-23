@@ -5,8 +5,5 @@
 @endsection
 
 @section('content')
-    <div class="description">
-        <h1>Заказы</h1>
-
-    </div>
+    <div>HUI</div>
 @endsection
