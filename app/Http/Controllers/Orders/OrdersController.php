@@ -12,7 +12,7 @@ class OrdersController extends Controller
 {
     public function index() {
         $orders = DB::table('orders')
-            ->where('id', Auth::id())
+            ->where('orders.id', Auth::id())
             ->join('users', 'orders.master_id', '=', 'users.id')
             ->select('orders.id',
                 'orders.order_time',
