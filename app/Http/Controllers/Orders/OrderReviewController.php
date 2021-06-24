@@ -42,6 +42,14 @@ class OrderReviewController extends Controller
 
     public function delete(Request $request, $orderId)
     {
-
+        $order = Order::query()
+            ->where('id', $orderId)
+            ->get();
+        if ($order->user_id != Auth::id() || Auth::user()->role != 'ADMIN') {
+            //Сделать редикрект
+            return view('You shall not pass!');
+        }
+        $order->delete();
+        return view('OrderSuccessfullyDeleted', ['orderId' => $orderId]);
     }
 }

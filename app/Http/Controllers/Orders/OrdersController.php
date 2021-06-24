@@ -13,6 +13,7 @@ class OrdersController extends Controller
     public function index() {
         $orders = DB::table('orders')
             ->where('orders.user_id', Auth::id())
+            ->whereNull('deleted_at')
             ->join('masters', 'orders.master_id', '=', 'masters.id')
             ->join('users', 'masters.user_id', '=', 'users.id')
             ->select('orders.id',
@@ -26,6 +27,7 @@ class OrdersController extends Controller
         if (Auth::user()->role == 'MASTER') {
             $ordersAssignedToMe = DB::table('orders')
                 ->where('orders.master_id', Auth::id())
+                ->whereNull('deleted_at')
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.id',
                     'orders.order_time',
@@ -36,6 +38,7 @@ class OrdersController extends Controller
         }
         else if (Auth::user()->role == 'ADMIN') {
             $allOrders = DB::table('orders')
+                ->whereNull('deleted_at')
                 ->join('masters', 'orders.master_id', '=', 'masters.id')
                 ->join('users', 'masters.user_id', '=', 'users.id')
                 ->select('orders.id',
@@ -52,6 +55,7 @@ class OrdersController extends Controller
                     'orders.comment'
                 )->get();
         }
+        dd($allOrders);
         return view('orders', ['myOrders' => $orders,
             'ordersAssignedToMe' => $ordersAssignedToMe,
             'allOrders' => $allOrders]);
