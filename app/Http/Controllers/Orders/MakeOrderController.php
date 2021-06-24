@@ -20,7 +20,8 @@ class MakeOrderController extends Controller
 
     public function store(Request $request) {
         $order = Order::create([
-            'order_time' => $request->date,
+            'order_date' => $request->date,
+            'order_time' => $request->time,
             'user_id' => Auth::id(),
             'master_id' => $request->masterId,
             'comment' => $request->comment,

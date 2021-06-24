@@ -17,6 +17,7 @@ class OrdersController extends Controller
             ->join('masters', 'orders.master_id', '=', 'masters.id')
             ->join('users', 'masters.user_id', '=', 'users.id')
             ->select('orders.id',
+                'orders.order_date',
                 'orders.order_time',
                 'users.name AS master_name',
                 'orders.comment'
@@ -30,6 +31,7 @@ class OrdersController extends Controller
                 ->whereNull('deleted_at')
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.id',
+                    'orders.order_date',
                     'orders.order_time',
                     'users.name',
                     'orders.comment'
@@ -43,6 +45,7 @@ class OrdersController extends Controller
                 ->join('masters', 'orders.master_id', '=', 'masters.id')
                 ->join('users', 'masters.user_id', '=', 'users.id')
                 ->select('orders.id',
+                    'orders.order_date',
                     'orders.order_time',
                     'orders.users_id',
                     'users.name',
@@ -50,6 +53,7 @@ class OrdersController extends Controller
                 )
                 ->join('users AS u', 'orders.user_id', '=', 'u.id')
                 ->select('orders.id',
+                    'orders.order_date',
                     'orders.order_time',
                     'u.name AS user_name',
                     'users.name AS master_name',

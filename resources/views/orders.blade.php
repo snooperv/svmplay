@@ -21,6 +21,7 @@
             <table>
                 <tr>
                     <td>№</td>
+                    <td>Дата</td>
                     <td>Время</td>
                     <td>Имя клиента</td>
                     <td>Комментарий</td>
@@ -28,6 +29,7 @@
                 @foreach (upToArr($ordersAssignedToMe) as $value)
                     <tr>
                         <td>{{ $value["id"] }}</td>
+                        <td>{{ $value["order_date"] }}</td>
                         <td>{{ $value["order_time"] }}</td>
                         <td>{{ $value["name"] }}</td>
                         <td>{{ $value["comment"] }}</td>
@@ -46,6 +48,7 @@
         <table>
             <tr>
                 <td>№</td>
+                <td>Дата</td>
                 <td>Время</td>
                 <td>Имя мастера</td>
                 @if (Auth::user()->role == 'ADMIN')
@@ -58,6 +61,7 @@
             @foreach (upToArr($myOrders) as $value)
                 <tr>
                     <td>{{ $value["id"] }}</td>
+                    <td>{{ $value["order_date"] }}</td>
                     <td>{{ $value["order_time"] }}</td>
                     <td>{{ $value["master_name"] }}</td>
                     <td>{{ $value["comment"] }}</td>
@@ -75,6 +79,7 @@
                 @foreach (upToArr($allOrders) as $value)
                     <tr>
                         <td>{{ $value["id"] }}</td>
+                        <td>{{ $value["order_date"] }}</td>
                         <td>{{ $value["order_time"] }}</td>
                         <td>{{ $value["master_name"] }}</td>
                         <td>{{ $value["user_name"] }}</td>
