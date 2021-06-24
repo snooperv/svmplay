@@ -30,14 +30,13 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::view('/orders', 'orders');
 Route::view('/create', 'create_order');
 
-//Route::middleware([Authenticate::class])->group(function() {
-Route::get('/make-order', [MakeOrderController::class, 'index']);
-Route::post('/make-order', [MakeOrderController::class, 'store']);
-Route::get('/orders', [OrdersController::class, 'index']);
-Route::get('/orders/{orderId}', [OrderReviewController::class, 'index']);
-Route::patch('/orders/{orderId}', [OrderReviewController::class, 'update']);
-//});
-
+Route::middleware([Authenticate::class])->group(function() {
+    Route::get('/make-order', [MakeOrderController::class, 'index']);
+    Route::post('/make-order', [MakeOrderController::class, 'store']);
+    Route::get('/orders', [OrdersController::class, 'index']);
+    Route::get('/orders/{orderId}', [OrderReviewController::class, 'index']);
+    Route::patch('/orders/{orderId}', [OrderReviewController::class, 'update']);
+    Route::delete('/orders/{orderId}', [OrderReviewController::class, 'delete']);
+});

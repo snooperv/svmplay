@@ -12,8 +12,10 @@ class OrdersController extends Controller
 {
     public function index() {
         $orders = DB::table('orders')
-            ->where('orders.id', Auth::id())
-            ->join('users', 'orders.master_id', '=', 'users.id')
+            ->where('orders.user_id', Auth::id())
+            ->whereNull('deleted_at')
+            ->join('masters', 'orders.master_id', '=', 'masters.id')
+            ->join('users', 'masters.user_id', '=', 'users.id')
             ->select('orders.id',
                 'orders.order_time',
                 'users.name AS master_name',
@@ -24,7 +26,8 @@ class OrdersController extends Controller
         $allOrders = null;
         if (Auth::user()->role == 'MASTER') {
             $ordersAssignedToMe = DB::table('orders')
-                ->where('master_id', Auth::id())
+                ->where('orders.master_id', Auth::user()->master_id)
+                ->whereNull('deleted_at')
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.id',
                     'orders.order_time',
@@ -36,18 +39,20 @@ class OrdersController extends Controller
 
         else if (Auth::user()->role == 'ADMIN') {
             $allOrders = DB::table('orders')
-                ->join('users', 'orders.master_id', '=', 'users.id')
+                ->whereNull('deleted_at')
+                ->join('masters', 'orders.master_id', '=', 'masters.id')
+                ->join('users', 'masters.user_id', '=', 'users.id')
                 ->select('orders.id',
                     'orders.order_time',
-                    'orders',
-                    'users_id',
-                    'users.name AS master_name',
+                    'orders.users_id',
+                    'users.name',
                     'orders.comment'
                 )
-                ->join('users', 'orders.user_id', '=', 'users.id')
+                ->join('users AS u', 'orders.user_id', '=', 'u.id')
                 ->select('orders.id',
                     'orders.order_time',
-                    'users.name',
+                    'u.name AS user_name',
+                    'users.name AS master_name',
                     'orders.comment'
                 )->get();
         }
