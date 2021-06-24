@@ -6,7 +6,6 @@
 
 @section('content')
     <div class="orders">
-    {{ $myOrders }} <!--Проверочная переменная-->
         <h1>Мои записи</h1>
         <br>
         <table>
