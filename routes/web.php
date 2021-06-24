@@ -30,6 +30,8 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::view('/create', 'create_order');
+
 Route::middleware([Authenticate::class])->group(function() {
     Route::get('/make-order', [MakeOrderController::class, 'index']);
     Route::post('/make-order', [MakeOrderController::class, 'store']);
@@ -38,4 +40,3 @@ Route::middleware([Authenticate::class])->group(function() {
     Route::patch('/orders/{orderId}', [OrderReviewController::class, 'update']);
     Route::delete('/orders/{orderId}', [OrderReviewController::class, 'delete']);
 });
-

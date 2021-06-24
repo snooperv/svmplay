@@ -36,6 +36,7 @@ class OrdersController extends Controller
                 )
                 ->get();
         }
+
         else if (Auth::user()->role == 'ADMIN') {
             $allOrders = DB::table('orders')
                 ->whereNull('deleted_at')
