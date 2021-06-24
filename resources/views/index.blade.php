@@ -11,7 +11,7 @@
             Вас услугу</p>
     </div>
     <div class="buttons">
-        <a href="#" class="btn-main">Записаться</a>
+        <a href="/create" class="btn-main">Записаться</a>
         <a href="/orders" class="btn-main">Мои записи</a>
     </div>
     <!--<img src="resources/Images/nails.png" alt="ногти">-->

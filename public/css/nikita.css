@@ -41,7 +41,7 @@ header{
     width: 500px;
     align-items: center;
 }
-.buttons a{
+.buttons a, .btn-create-order{
     margin: auto;
     width: 180px;
     text-decoration: none;
@@ -201,3 +201,11 @@ footer{
     transform: translateY(-7px);
 }
 
+.btn-create-order{
+    display: block;
+    margin-left: 45%;
+
+}
+.btn-create-order:hover{
+    background: black;
+}
