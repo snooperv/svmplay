@@ -1,11 +1,17 @@
-let navs = document.querySelectorAll(".nav-main");
-for (let i = 0; i < navs.length; i++){
-    console.log(navs[i])
-    navs[i].onclick = function (){
+let page = document.querySelector(".head-title")
 
-        if(!navs[i].classList.contains("active")){
-            navs[i].classList.add("active");
-            navs[i].classList.add("bg-dark");
-        }
-    }
+if (page.textContent === "NAILS -     Записаться\n") {
+    let link = document.querySelector(".nav-create")
+    link.classList.add("active")
+    link.classList.add("bg-dark")
+}
+if (page.textContent === "NAILS -     Мои записи\n") {
+    let link = document.querySelector(".nav-orders")
+    link.classList.add("active")
+    link.classList.add("bg-dark")
+}
+if (page.textContent === "NAILS -     Главная\n") {
+    let link = document.querySelector(".nav-main")
+    link.classList.add("active")
+    link.classList.add("bg-dark")
 }
