@@ -15,7 +15,7 @@
                             @csrf
                             @method('POST')
                             <div class="form-group row">
-                                <label for="date" class="col-md-4 col-form-label text-md-right">Время</label>
+                                <label for="date" class="col-md-4 col-form-label text-md-right">Дата</label>
                                 <div class="col-md-6">
                                     <input id="date" name="date" value="{{ old('date') }}" type="date"
                                            class="form-control"
