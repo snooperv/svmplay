@@ -27,10 +27,10 @@ class OrderReviewController extends Controller
     }
 
     public function update(Request $request, $orderId) {
-        $order = Order::query()
+        $order = DB::table('orders')
             ->where('id', $orderId)
             ->first();
-        if ($order->user_id != Auth::id() || Auth::user()->role != 'ADMIN') {
+        if ($order->user_id != Auth::id() && Auth::user()->role != 'ADMIN') {
             //Сделать редикрект
             return view('You shall not pass!');
         }
@@ -42,10 +42,11 @@ class OrderReviewController extends Controller
 
     public function delete(Request $request, $orderId)
     {
+        $orderId = intval($orderId);
         $order = Order::query()
             ->where('id', $orderId)
-            ->get();
-        if ($order->user_id != Auth::id() || Auth::user()->role != 'ADMIN') {
+            ->first();
+        if ($order->user_id != Auth::id() && Auth::user()->role != 'ADMIN') {
             //Сделать редикрект
             return view('You shall not pass!');
         }
