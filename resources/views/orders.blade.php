@@ -39,7 +39,7 @@
         <?php
         if (Auth::user()->role == 'CLIENT' || Auth::user()->role == 'MASTER') {
             echo "<h1>Мои записи</h1>";
-           } else if (Auth::user()->role == 'ADMIN') {
+        } else if (Auth::user()->role == 'ADMIN') {
             echo "<h1>Все записи клиентов</h1>";
         }
         ?>
@@ -61,7 +61,8 @@
                     <td>{{ $value["order_time"] }}</td>
                     <td>{{ $value["master_name"] }}</td>
                     <td>{{ $value["comment"] }}</td>
-                    <td><form method="post" action="orders/ {{ $value["id"] }}">
+                    <td>
+                        <form method="post" action="orders/ {{ $value["id"] }}">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Удалить запись</button>
