@@ -39,4 +39,9 @@ class OrderReviewController extends Controller
         $order['order_time'] = $request->date;
         $order->save();
     }
+
+    public function delete(Request $request, $orderId)
+    {
+
+    }
 }
