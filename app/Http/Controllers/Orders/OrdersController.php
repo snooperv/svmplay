@@ -12,8 +12,9 @@ class OrdersController extends Controller
 {
     public function index() {
         $orders = DB::table('orders')
-            ->where('orders.id', Auth::id())
-            ->join('users', 'orders.master_id', '=', 'users.id')
+            ->where('orders.user_id', Auth::id())
+            ->join('masters', 'orders.master_id', '=', 'masters.id')
+            ->join('users', 'masters.user_id', '=', 'users.id')
             ->select('orders.id',
                 'orders.order_time',
                 'users.name AS master_name',
