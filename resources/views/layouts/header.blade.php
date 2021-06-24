@@ -6,9 +6,9 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="/" class="nav-link nav-main bg-dark active">Главная</a></li>
-                <li class="nav-item"><a href="/orders" class="nav-link nav-main">Мои записи</a></li>
-                <li class="nav-item"><a href="/create" class="nav-link nav-main">Записаться</a></li>
+                <li class="nav-item"><a href="/" class="nav-link nav-main">Главная</a></li>
+                <li class="nav-item"><a href="/orders" class="nav-link nav-orders">Мои записи</a></li>
+                <li class="nav-item"><a href="/create" class="nav-link nav-create">Записаться</a></li>
                 <li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>
                 <li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>
             </ul>
