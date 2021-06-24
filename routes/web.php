@@ -31,6 +31,7 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::view('/orders', 'orders');
+Route::view('/create', 'create_order');
 
 //Route::middleware([Authenticate::class])->group(function() {
 Route::get('/make-order', [MakeOrderController::class, 'index']);

@@ -33,6 +33,7 @@ class OrdersController extends Controller
                 )
                 ->get();
         }
+
         else if (Auth::user()->role == 'ADMIN') {
             $allOrders = DB::table('orders')
                 ->join('users', 'orders.master_id', '=', 'users.id')
