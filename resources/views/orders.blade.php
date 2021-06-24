@@ -62,10 +62,10 @@
                     <td>{{ $value["master_name"] }}</td>
                     <td>{{ $value["comment"] }}</td>
                     <td>
-                        <form method="post" action="orders/ {{ $value["id"] }}">
+                        <form method="post" action="orders/ {{ $value["id"] }}" onclick="return confirm('Вы действительно хотите удалить запись?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Удалить запись</button>
+                            <button type="submit" class="but_delete">Удалить запись</button>
                         </form>
                     </td>
                 </tr>

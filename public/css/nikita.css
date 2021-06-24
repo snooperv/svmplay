@@ -195,9 +195,19 @@ footer{
     transition: .3s;
 }
 .floating-button:hover {
-    background: #2EE59D;
-    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    background: #00042a;
+    box-shadow: 0 15px 20px rgba(0, 2, 196, 0.4);
     color: white;
     transform: translateY(-7px);
+}
+
+.but_delete {
+    border-radius: 12px;
+    background: #ECE9E0;
+}
+
+.but_delete:hover {
+    background: #F5D7BF;
+    box-shadow: 0 15px 20px rgba(227, 202, 137, 0.4);
 }
 
