@@ -32,7 +32,7 @@
                             <div class="form-group row">
                                 <label for="master_id" class="col-md-4 col-form-label text-md-right">Мастер</label>
                                 <div class="col-md-6">
-                                <select id="master_id" class="form-control">
+                                <select id="master_id" class="form-control" form>
                                     <option>Kirill</option>
                                     <option>Vadim</option>
                                 </select>
