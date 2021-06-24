@@ -52,10 +52,10 @@ header{
     color: white;
     font-size: 22px;
     transition: 0.4s;
+    text-align: center;
 }
 .buttons a:hover{
     background: black;
-
 }
 
 .logo-name{
