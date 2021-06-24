@@ -26,7 +26,7 @@ class OrdersController extends Controller
         $allOrders = null;
         if (Auth::user()->role == 'MASTER') {
             $ordersAssignedToMe = DB::table('orders')
-                ->where('orders.master_id', Auth::id())
+                ->where('orders.master_id', Auth::user()->master_id)
                 ->whereNull('deleted_at')
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.id',
