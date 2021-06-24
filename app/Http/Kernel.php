@@ -2,6 +2,9 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\Authenticate;
+use App\Http\Middleware\Statuses\AdminOnlyMiddleware;
+use App\Http\Middleware\Statuses\MasterOrAdminOnlyMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -43,6 +46,16 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'masterOrAdmin' => [
+            Authenticate::class,
+            MasterOrAdminOnlyMiddleware::class,
+        ],
+
+        'admin' => [
+            Authenticate::class,
+            AdminOnlyMiddleware::class,
+        ]
     ];
 
     /**
@@ -58,7 +71,7 @@ class Kernel extends HttpKernel
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'notClient' => \App\Http\Middleware\Statuses\RedirectIfClient::class,
+        'notClient' => \App\Http\Middleware\Statuses\MasterOrAdminOnlyMiddleware::class,
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,

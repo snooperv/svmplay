@@ -7,7 +7,7 @@
 
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="/" class="nav-link bg-dark active">Главная</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>
+                <li class="nav-item"><a href="/orders" class="nav-link">Мои записи</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>

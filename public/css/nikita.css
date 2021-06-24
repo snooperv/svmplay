@@ -150,3 +150,28 @@ footer{
 .space {
     flex-grow: 1;
 }
+
+.orders h1 {
+    text-align: center;
+}
+
+.orders table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+.orders th {
+    font-size: 18px;
+    padding: 10px;
+}
+.orders td {
+    background: #F5D7BF;
+    padding: 10px;
+}
+
