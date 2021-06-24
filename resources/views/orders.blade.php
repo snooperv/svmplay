@@ -61,7 +61,12 @@
                     <td>{{ $value["order_time"] }}</td>
                     <td>{{ $value["master_name"] }}</td>
                     <td>{{ $value["comment"] }}</td>
-                    <td>Удалить</td>
+                    <td><form method="post" action="orders/ {{ $value["id"] }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Удалить запись</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
 

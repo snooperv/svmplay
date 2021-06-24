@@ -36,6 +36,6 @@ Route::middleware([Authenticate::class])->group(function() {
     Route::get('/orders', [OrdersController::class, 'index']);
     Route::get('/orders/{orderId}', [OrderReviewController::class, 'index']);
     Route::patch('/orders/{orderId}', [OrderReviewController::class, 'update']);
-    Route::delete('/orders/{orderId}', [OrderReviewController::class, 'delete'])->name('order.delete');
+    Route::delete('/orders/{orderId}', [OrderReviewController::class, 'delete']);
 });
 
