@@ -6,8 +6,8 @@
 
 @section('content')
     <div class="orders">
+    {{ $myOrders }} <!--Проверочная переменная-->
         <h1>Мои записи</h1>
-        <!--{{ $myOrders }} Проверочная переменная-->
         <br>
         <table>
             <tr>
@@ -21,18 +21,18 @@
             {
                 $orders = array();
                 foreach ($obj as $item => $value) {
-                    $orders = (array)$value;
+                    array_push($orders, (array)$value);
                 }
                 return $orders;
             }
             $myOrders = upToArr($myOrders);
 
-            for ($i = 0; $i < count($myOrders) / 4; $i++) {
+            foreach ($myOrders as $value) {
                 echo "<tr>";
-                echo "<td>" . $myOrders["id"] . "</td>";
-                echo "<td>" . $myOrders["order_time"] . "</td>";
-                echo "<td>" . $myOrders["master_name"] . "</td>";
-                echo "<td>" . $myOrders["comment"] . "</td>";
+                echo "<td>" . $value["id"] . "</td>";
+                echo "<td>" . $value["order_time"] . "</td>";
+                echo "<td>" . $value["master_name"] . "</td>";
+                echo "<td>" . $value["comment"] . "</td>";
                 echo "</tr>";
             }
             ?>
