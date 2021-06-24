@@ -6,7 +6,14 @@
 
 @section('content')
     <div class="description">
-        <p>Добро пожаловать на nails.com!<br>
-            Здесь вы можете записаться к нашим мастерам</p>
+        <h2>Добро пожаловать на nails.com!</h2>
+        <p>Здесь вы можете записаться к нашим мастерам и выбрать интересующую
+            Вас услугу</p>
     </div>
+    <div class="buttons">
+        <a href="#" class="btn-main">Записаться</a>
+        <a href="#" class="btn-main">Мои записи</a>
+    </div>
+    <!--<img src="resources/Images/nails.png" alt="ногти">-->
+
 @endsection

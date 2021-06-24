@@ -2,9 +2,8 @@
     <div class="space">
     </div>
     <div class="contacts">
-        <span class="contacts">Иванов Иван Иванович</span>
-        <span class="contacts">inanov@urfu.ru</span>
-        <span class="contacts"></span>
+        <span class="contacts">SVMPlay</span>
+        <span class="contacts">svmplay@urfu.ru</span>
         <div class="contacts">2021</div>
     </div>
 </footer>
