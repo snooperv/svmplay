@@ -55,7 +55,6 @@ class OrdersController extends Controller
                     'orders.comment'
                 )->get();
         }
-        dd($allOrders);
         return view('orders', ['myOrders' => $orders,
             'ordersAssignedToMe' => $ordersAssignedToMe,
             'allOrders' => $allOrders]);
