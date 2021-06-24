@@ -31,8 +31,10 @@
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Мастер</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="email" class="form-control @error('email') is-invalid @enderror"
-                                           name="email" required autocomplete="email" autofocus>
+                                <select class="form-control">
+                                    <option>Kirill</option>
+                                    <option>Vadim</option>
+                                </select>
                                 </div>
                             </div>
 
@@ -42,6 +44,9 @@
                                     <textarea id="comment" class="form-control"></textarea>
                                 </div>
                             </div>
+
+                            <input type="submit" value="Записаться" class="btn-create-order">
+
                         </form>
                     </div>
                 </div>

@@ -41,7 +41,7 @@ header{
     width: 500px;
     align-items: center;
 }
-.buttons a{
+.buttons a, .btn-create-order{
     margin: auto;
     width: 180px;
     text-decoration: none;
@@ -201,6 +201,15 @@ footer{
     transform: translateY(-7px);
 }
 
+.btn-create-order{
+    display: block;
+    margin-left: 45%;
+
+}
+.btn-create-order:hover{
+    background: black;
+}
+=======
 .but_delete {
     border-radius: 12px;
     background: #ECE9E0;
@@ -210,4 +219,3 @@ footer{
     background: #F5D7BF;
     box-shadow: 0 15px 20px rgba(227, 202, 137, 0.4);
 }
-

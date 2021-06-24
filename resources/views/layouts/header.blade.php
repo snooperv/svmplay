@@ -6,11 +6,11 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="/" class="nav-link bg-dark active">Главная</a></li>
-                <li class="nav-item"><a href="/orders" class="nav-link">Мои записи</a></li>
-                <li class="nav-item"><a href="/create" class="nav-link">Записаться</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Кнопка</a></li>
+                <li class="nav-item"><a href="/" class="nav-link nav-main bg-dark active">Главная</a></li>
+                <li class="nav-item"><a href="/orders" class="nav-link nav-main">Мои записи</a></li>
+                <li class="nav-item"><a href="/create" class="nav-link nav-main">Записаться</a></li>
+                <li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>
+                <li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>
             </ul>
 
             <div class="col-md-3 text-end d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
@@ -52,3 +52,4 @@
         </header>
 
     <script src=="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/nav.js') }}"></script>
