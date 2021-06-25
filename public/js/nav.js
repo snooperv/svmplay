@@ -1,17 +1,20 @@
 let page = document.querySelector(".head-title")
 
-if (page.textContent === "NAILS -     Записаться\n") {
-    let link = document.querySelector(".nav-create")
+function addClasses(className){
+    let link = document.querySelector(className)
     link.classList.add("active")
     link.classList.add("bg-dark")
+}
+
+if (page.textContent === "NAILS -     Записаться\n") {
+    addClasses(".nav-create")
 }
 if (page.textContent === "NAILS -     Мои записи\n") {
-    let link = document.querySelector(".nav-orders")
-    link.classList.add("active")
-    link.classList.add("bg-dark")
+    addClasses(".nav-orders")
 }
 if (page.textContent === "NAILS -     Главная\n") {
-    let link = document.querySelector(".nav-main")
-    link.classList.add("active")
-    link.classList.add("bg-dark")
+    addClasses(".nav-main")
+}
+if (page.textContent === "NAILS -     Контакты\n") {
+    addClasses(".nav-contacts")
 }

@@ -9,8 +9,8 @@
                 <li class="nav-item"><a href="/" class="nav-link nav-main">Главная</a></li>
                 <li class="nav-item"><a href="/orders" class="nav-link nav-orders">Мои записи</a></li>
                 <li class="nav-item"><a href="/create" class="nav-link nav-create">Записаться</a></li>
-                <li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>
-                <li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>
+                <!--<li class="nav-item"><a href="#" class="nav-link nav-main">Кнопка</a></li>-->
+                <li class="nav-item"><a href="/contacts" class="nav-link nav-contacts">Контакты</a></li>
             </ul>
 
             <div class="col-md-3 text-end d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
@@ -31,7 +31,7 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#"
+                        <a class="dropdown-item" href="/account"
                            onclick="">
                             Личный кабинет
                         </a>
