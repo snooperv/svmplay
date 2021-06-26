@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\ChangePasswordController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Orders\MakeOrderController;
 use App\Http\Controllers\Orders\OrderReviewController;
@@ -31,10 +32,11 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::view('/create', 'create_order');
-Route::view('/account', 'account');
 Route::view('/contacts', 'contacts');
 
 Route::middleware([Authenticate::class])->group(function() {
+    Route::view('/account', 'account');
+    Route::patch('/account', [ChangePasswordController::class, 'patch']);
     Route::get('/make-order', [MakeOrderController::class, 'index']);
     Route::post('/make-order', [MakeOrderController::class, 'store']);
     Route::get('/orders', [OrdersController::class, 'index']);
