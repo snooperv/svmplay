@@ -35,8 +35,8 @@
                                 <div class="col-md-6">
                                     <select id="masterId" name="masterId" value="{{ old('masterId') }}"
                                             class="form-control" required autocomplete="masterId">
-                                        <option value="1">Кирилл</option>
-                                        <option value="2">Никита</option>
+                                        <option value="3">Кирилл</option>
+                                        <option value="4">Никита</option>
                                     </select>
                                 </div>
                             </div>
